@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Visualizations</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Mathematical Visualizations</h1>
+            <nav class="tabs">
+                <button class="tab active" data-tab="mandelbrot">Mandelbrot Set</button>
+                <button class="tab" data-tab="fourier">Fourier Transform</button>
+
+            </nav>
+        </header>
+
+        <main>
+            <section id="mandelbrot" class="content active">
+                <h2>Mandelbrot Set</h2>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>Iterations</label>
+                        <input type="number" id="maxIter" value="100" min="10" max="500">
+                    </div>
+                    <div class="control-group">
+                        <label>Zoom</label>
+                        <input type="number" id="zoom" value="1" min="0.1" max="100" step="0.1">
+                    </div>
+                    <div class="control-group">
+                        <label>Center X</label>
+                        <input type="number" id="centerX" value="0" step="0.01">
+                    </div>
+                    <div class="control-group">
+                        <label>Center Y</label>
+                        <input type="number" id="centerY" value="0" step="0.01">
+                    </div>
+
+                    <button id="mandelbrotRender">Render</button>
+                    <button id="mandelbrotReset">Reset</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="mandelbrotCanvas" width="800" height="600"></canvas>
+                </div>
+                <div class="info">
+                    The Mandelbrot set is the set of complex numbers c for which the iterative function f(z) = z² + c
+                    remains bounded when starting from z = 0.
+                </div>
+                <div class="status" id="mandelbrotStatus">Ready</div>
+            </section>
+
+            <section id="fourier" class="content">
+                <h2>Fourier Transform</h2>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>Wave Type</label>
+                        <select id="waveType">
+                            <option value="sine">Sine</option>
+                            <option value="square">Square</option>
+                            <option value="triangle">Triangle</option>
+                            <option value="sawtooth">Sawtooth</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Frequency</label>
+                        <input type="number" id="frequency" value="5" min="1" max="20">
+                    </div>
+                    <div class="control-group">
+                        <label>Amplitude</label>
+                        <input type="number" id="amplitude" value="1" min="0.1" max="3" step="0.1">
+                    </div>
+
+                    <button id="fourierAnalyze">Analyze</button>
+                    <button id="fourierClear">Clear</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="fourierCanvas" width="800" height="500"></canvas>
+                </div>
+                <div class="info">
+                    The Fourier Transform decomposes a time-domain signal into its frequency components, showing which
+                    frequencies are present in the original signal.
+                </div>
+                <div class="status" id="fourierStatus">Ready</div>
+            </section>
+        </main>
+    </div>
+
+
+    <script src="./js/api.js"></script>
+    <script src="./js/mandelbrot.js"></script>
+    <script src="./js/fourier.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
