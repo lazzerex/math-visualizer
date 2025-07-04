@@ -2,6 +2,13 @@
 
 A high-performance mathematical visualization tool combining Python's computational power with JavaScript's interactive capabilities.
 
+
+![image](https://github.com/user-attachments/assets/d8f57c87-3049-4e61-9914-a8739d388971)
+
+![image](https://github.com/user-attachments/assets/c9c1c742-b028-45e6-9d58-ba0d9f4429e1)
+
+
+
 ## Project Structure
 
 ```
